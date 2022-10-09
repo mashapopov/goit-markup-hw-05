@@ -59,7 +59,7 @@ ul {
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: black;
-
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .colortext
 {
@@ -86,6 +86,7 @@ ul {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+    transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /* position: relative; */
 }
 
@@ -118,6 +119,7 @@ ul {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--titl-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-mail:hover, .header-tel:hover,
 .header-mail:focus, .header-tel:focus
@@ -140,21 +142,22 @@ ul {
     position: relative; 
     color:var(--accent-color);
     transition-property: background-color;
-    /* transition-duration: 250ms; */
+    transition-duration: 250ms; 
 }
 .current::after{
  position: absolute; 
     content: "";
     display: block;
     color: var(--accent-color);
-    top: 97%;  
+    /* top: 97%;   */
     left: 0;
-    /* bottom: 0; */
+    bottom: 0; 
     width: 100%;
     height: 4px;
-     background-size: cover; 
+    background-size: cover; 
     background-color: var(--accent-color);
     border-radius: 2px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* иконки в контактах в шапке */
 .kontakt-icon{
@@ -243,15 +246,17 @@ background: #FFFFFF;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 transform: translate(-50%, -50%) scale(1);
-transition: transform 300ms linear;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0);
-    transition: transform 300ms linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     
    .icon-close{
     fill: #000;
+    transition: background-color 250ms ccubic-bezier(0.4, 0, 0.2, 1),
+            fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
    .icon-close:focus, .icon-close:hover,
    .btn-close:focus, .btn-close:hover {
@@ -379,6 +384,30 @@ background-image: url(../images/astronaut\ 1.svg); } */
     .work-item:not(:last-child){
         margin-right: 32px;
     }
+.work-link{
+    position: relative; 
+    display: block;
+    line-height: 0;
+}
+.work-text{
+  position: absolute;  
+ font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;  
+bottom: 0;
+right: 0;
+width: 370px;
+height: 70px;
+padding-top: 27px;
+text-align: center;
+background: rgba(47, 48, 58, 0.8);
+color: #ffffff;
+}
+
+
 /* ---------команда--------------- */
 
 .team{
@@ -444,6 +473,8 @@ padding: 16px 32px 30px 32px; */
     height: 44px;
     border-radius: 50%;
     background:var(--color-white);
+    transition: background-color 250ms ccubic-bezier(0.4, 0, 0.2, 1),
+            color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .team-cot-link:hover, .team-cot-link:focus{
@@ -489,6 +520,8 @@ color: var(--primary-text-color);
         height: 100%;
         border: 1px solid #AFB1B8;
         border-radius: 4px;
+        transition: border-color 250ms ccubic-bezier(0.4, 0, 0.2, 1),
+            color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .klients-link:hover, .klients-link:focus{
        color: var(--accent-color);
@@ -515,7 +548,8 @@ color: var(--primary-text-color);
    
 }
 .footer-mail{
- padding-bottom:  9px;   
+ padding-bottom:  9px; 
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
 .footer-mail:hover, .footer-tel:hover,
@@ -555,6 +589,7 @@ color: var(--primary-text-color);
     letter-spacing: 0.03em;
     color: #FFFFFF;
     margin-bottom: 20px;
+    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .footer-link:hover, .footer-link:focus
@@ -591,6 +626,7 @@ margin-bottom: 20px;
     height: 100%;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms ccubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .footer-cot-link:hover, 
@@ -633,6 +669,8 @@ text-align: center;
 letter-spacing: 0.03em;
 color: var(--primary-text-color);
 background: #F5F4FA;
+transition: background-color 250ms ccubic-bezier(0.4, 0, 0.2, 1),
+            color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .buttons:hover,
@@ -663,6 +701,7 @@ color: var(--titl-text-color);
 .photo-link{
     display: block;
     background-color: var(--color-white);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .photo-link:hover, 
 .photo-link:focus{
@@ -692,9 +731,7 @@ padding: 20px 24px;
     margin-bottom: 0;
 }
 /* ОБВЕРТКА НА ФОТО */
-.photo-link{
-   
-}
+
 .wrapper{
    position: relative;  
    overflow: hidden;
@@ -716,7 +753,7 @@ padding: 20px 24px;
     padding-right: 24px;
     padding-top: 63px;
     transform: translateY(100%);
-    transition: transform 300ms linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     overflow: auto;
 }
 .photo-link:hover .wrapper-text{
